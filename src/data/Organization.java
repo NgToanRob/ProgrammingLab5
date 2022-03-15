@@ -26,12 +26,16 @@ public class Organization implements Comparable<Organization> {
         this.officialAddress = officialAddress;
     }
 
+    public void setId(long id){
+        this.id = id;
+    }
+
     /**
      * Get the ID of the organization
      * 
      * @return The id of the organization.
      */
-    public Long getId() {
+    public long getId() {
         return id;
     }
 

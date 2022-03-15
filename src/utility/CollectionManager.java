@@ -23,6 +23,18 @@ public class CollectionManager {
         this.fileManager = fileManager;
 
         loadCollection();
+        regenerateID();
+    }
+
+    /**
+     * `regenerateID()`: Regenerates the ID for each organization in the collection
+     */
+    private void regenerateID(){
+        ArrayList<Organization> collection = getCollection();
+        long id = 1;
+        for(Organization organization : collection){
+            organization.setId(id++);
+        }
     }
 
     /**
@@ -98,9 +110,9 @@ public class CollectionManager {
      * @param id The id of the organization to retrieve.
      * @return The Organization object that has the same id as the id parameter.
      */
-    public Organization getById(Long id) {
+    public Organization getById(long id) {
         for (Organization organization : organizationCollection) {
-            if (organization.getId().equals(id)) {
+            if (Long.valueOf(organization.getId()).equals(id)) {
                 return organization;
             }
         }
