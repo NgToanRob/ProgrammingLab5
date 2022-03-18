@@ -32,7 +32,7 @@ import utility.Asker;
  */
 public class App {
     public static void main(String[] args) {
-        try (Scanner userScanner = new Scanner(System.in)) {
+        Scanner userScanner = new Scanner(System.in);
             final String envVariable = "TOAN";
 
             Asker asker = new Asker(userScanner);
@@ -58,6 +58,6 @@ public class App {
             Console console = new Console(commandManager, userScanner, asker);
 
             console.interactiveMode();
-        }
+        
     }
 }

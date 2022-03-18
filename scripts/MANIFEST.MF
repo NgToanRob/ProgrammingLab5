@@ -1,2 +1,2 @@
 Main-Class: run/App
-Class-Path: ../lib/gson-2.8.2.jar bin/
+Class-Path: lib/gson-2.8.2.jar bin/
